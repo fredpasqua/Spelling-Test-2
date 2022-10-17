@@ -4,41 +4,45 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css"></link>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
   <title>ROSE SPELLING TEST</title>
 </head>
+
 <body>
 <div class="voiceControl">
   <p>Select Voice: <select id='voiceList'></select></p>
   <input id='txtInput' placeholder='type something to test voice'/>
   <button id='btnSpeak'>Test Voice</button>
-<label>"how many words?"</label><input id="wordCountSelect" placeholder="enter a number 5-25"/>
-<button id='wordCount' onclick="addWordCount()">Submit</button>
-<button class="refresh-button">GAME RESET</button>
+  <label>"how many words?"</label><input id="wordCountSelect" placeholder="enter a number 5-25"/>
+  <button id='wordCount' onclick="addWordCount()">Submit</button>
+  <button class="refresh-button">GAME RESET</button>
 </div>
-<br>
+
+  <br>
+  
 <div class = "gameTitle">
-<h1 class="pageTitle">Spelling Game</h1>
+  <h1 class="pageTitle">Spelling Game</h1>
 </div>
-  <div id="inputListSection"></div>
+  
+<div id="inputListSection"></div>
   <div class=buttonsection>
     <div class="user_button_1">
-    <button class="submitButton" id="submitButtonScore" onclick="submit()" style="display: none">Check your Answers!</button>
-
+      <button class="submitButton" id="submitButtonScore" onclick="submit()" style="display: none">Check your Answers!</button>
+    </div>
   </div>
-  </div>
+  
   <div class="scoreBoard" id="scoreBoard">
     <h1>Points Earned:</h1>
     <h2 id='scoreContainer'>0</h2>
-    <div id = "magic">
-      <img  src="img/greenslothdance.gif" height="300px" width="300px"></img>
-      <audio controls id="audio">
-        <source src="music/edm-13416.ogg" type="audio/ogg">
+      <div id = "magic">
+        <img  src="img/greenslothdance.gif" height="300px" width="300px"></img>
+        <audio controls id="audio">
+          <source src="music/edm-13416.ogg" type="audio/ogg">
           <source src="music/edm-13416.mp3" type="audio/mpeg">
-          </audio>
-        </div>
+        </audio>
       </div>
+  </div>
       <script type="text/javascript" src="script.js"></script>
-  </body>
-    </html>
+</body>
+</html>
