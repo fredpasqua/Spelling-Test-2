@@ -1,10 +1,10 @@
 label {
-    display: block;
-    font: 1rem 'Fira Sans', sans-serif;
+  display: block;
+  font: 1rem "Fira Sans", sans-serif;
 }
 body {
-  background-color: ##fff9e6;
-  font-family: 'Rubik', sans-serif;
+  background-color: #fff9e6;
+  font-family: "Rubik", sans-serif;
 }
 #inputListSection {
   display: grid;
@@ -20,14 +20,13 @@ body {
 }
 
 @media only screen and (max-width: 880px) {
-#inputListSection {
-  display: grid;
-  grid-template-columns: 1fr 6fr;
-  grid-gap: 20px;
-  column-gap: 2px;
- }
+  #inputListSection {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-gap: 20px;
+    column-gap: 2px;
+  }
 }
-
 
 .xxx {
   height: 40px;
@@ -49,7 +48,7 @@ h1 {
   margin-right: auto;
 }
 
-#voiceList  {
+#voiceList {
   background: white;
   font-size: 20px;
 }
@@ -72,7 +71,6 @@ h1 {
   font-weight: bold;
 }
 
-
 h2 {
   font-size: 50px;
   margin-left: auto;
@@ -85,21 +83,20 @@ h2 {
   background-color: #fff9e6;
   border: 10px solid orange;
   border-radius: 10px;
-
 }
 
 #magic {
- display: none;
- flex-direction: column;
- align-items: center;
+  display: none;
+  flex-direction: column;
+  align-items: center;
 }
 
 button {
-    font-weight: bolder;
-    height: 40px;
-    border-radius: 10px;
-    border: 3px solid orange;
-  }
+  font-weight: bolder;
+  height: 40px;
+  border-radius: 10px;
+  border: 3px solid orange;
+}
 
 #btnSpeak {
   align-self: center;
