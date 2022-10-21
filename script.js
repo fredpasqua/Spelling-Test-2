@@ -3,8 +3,51 @@ var wordList = [];
 var misSpelledWordList = [];
 let answers = [];
 var wordCount = 0;
-
 var grade4Words = [
+  "photograph",
+  "autograph",
+  "paragraph",
+  "graph",
+  "automatic",
+  "automobile",
+  "photo",
+  "telephone",
+  "telegraph",
+  "telescope",
+  "television",
+  "photogenic",
+  "bankrupt",
+  "disrupt",
+  "interrupt",
+  "abrupt",
+  "heat",
+  "base",
+  "correct",
+  "bed",
+  "straight",
+  "measure",
+  "energy",
+  "usually",
+  "farm",
+  "its",
+  "country",
+  "circle",
+  "which",
+  "written",
+  "several",
+  "faces",
+  "whose",
+  "listen",
+  "single",
+  "buy",
+  "language",
+  "their",
+  "clear",
+  "explain",
+  "lost",
+  "week",
+  "grew",
+  "fields",
   "bridge",
   "gravity",
   "hungry",
@@ -177,13 +220,13 @@ function addWordCount() {
   let counter = document.getElementById("wordCountSelect");
   console.log(counter.value);
   wordCount = counter.value;
-  if (wordCount > 4 && wordCount < 26) {
+  if (wordCount > 4 && wordCount < 31) {
     counterButton = document.getElementById("wordCount");
     counterButton.style.display = "none";
     generateRan();
     game();
   } else {
-    alert("plese choose a number between 5 and 25!");
+    alert("plese choose a number between 5 and 28!");
   }
 }
 
