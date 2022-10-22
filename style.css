@@ -28,6 +28,8 @@ body {
   }
 }
 
+
+
 .xxx {
   height: 40px;
   border: 2px solid orange;
@@ -35,7 +37,7 @@ body {
   background-color: #ff5733;
   color: white;
   max-width: 400px;
-  font-size: 24px;
+  font-size: 20px;
 }
 h1 {
   font-size: 50px;
@@ -51,9 +53,43 @@ h1 {
 #voiceList {
   background: white;
   font-size: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  height: 2em;
 }
+#voiceTag {
+  margin-top: 3px;
+  padding: 3px;
+}
+.voiceChoice {
+  display: flex;
+}
+
 .voiceControl {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 10px;
+
+  grid-gap: 10px;
+  background-color: #fff9e6;
+  border: 2px solid orange;
+  font-size: 30px;
+}
+
+/* #txtInput {
+  height: 2em;
+  border-radius: 10px;
+} */
+.controls p, button, input, label{
+  font-size: 20px;
+}
+.gameControls {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   padding: 10px;
   border-radius: 10px;
   flex-direction: row;
@@ -98,9 +134,7 @@ button {
   border: 3px solid orange;
 }
 
-#btnSpeak {
-  align-self: center;
-}
+
 
 .talkieBtn {
   color: red;
@@ -119,3 +153,4 @@ button {
   margin-bottom: 10px;
   gap: 10px;
 }
+

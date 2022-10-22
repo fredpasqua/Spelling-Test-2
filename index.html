@@ -10,20 +10,28 @@
 </head>
 
 <body>
-<div class="voiceControl">
-  <p>Select Voice: <select id='voiceList'></select></p>
-  <input id='txtInput' placeholder='type something to test voice'/>
-  <button id='btnSpeak'>Test Voice</button>
-  <label>"How many words would you like to try?"</label><input id="wordCountSelect" placeholder="enter a number 5-30"/>
-  <button id='wordCount' onclick="addWordCount()">Submit</button>
-  <button class="refresh-button">GAME RESET</button>
-</div>
-
-  <br>
+  <div class = "gameTitle">
+    <h1 class="pageTitle">Spelling Game</h1>
+  </div>
   
-<div class = "gameTitle">
-  <h1 class="pageTitle">Spelling Game</h1>
-</div>
+  <div class="controls">
+    <div class="voiceControl">
+      <div class="voiceChoice">
+      <p id="voiceTag">Voice</p><select id='voiceList'></select></div>
+      <div>
+        <!-- //TODO: Set "mary had a little lamb" to button press -->
+      <!-- <input id='txtInput' placeholder='type something to test voice'/> -->
+      <div><button id='btnSpeak'>Test Voice</button></div>
+    </div>
+    </div>
+  
+    <div class="gameControls">
+      <label># of Words</label><input id="wordCountSelect" placeholder="enter a number 5-30"/>
+      <button id='wordCount' onclick="addWordCount()">Submit</button>
+     
+   </div>
+   <button class="refresh-button">GAME RESET</button>
+  </div>
   
 <div id="inputListSection"></div>
   <div class=buttonsection>
