@@ -346,10 +346,15 @@ btnSpeak.addEventListener("click", () => {
 });
 
 function PopulateVoices() {
+  // get the voices library from the local synthesizer
   voices = synth.getVoices();
+
+  // create new variable for selected voices, male and female ('Alex and Samantha');
+  const Voices = [];
+  Voices.push(voices[0], voices[33]);
   var selectedIndex = voiceList.selectedIndex < 0 ? 0 : voiceList.selectedIndex;
   voiceList.innerHTML = "";
-  voices.forEach((voice) => {
+  Voices.forEach((voice) => {
     var listItem = document.createElement("option");
     listItem.textContent = voice.name;
     listItem.setAttribute("data-lang", voice.lang);
