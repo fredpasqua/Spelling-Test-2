@@ -348,7 +348,7 @@ btnSpeak.addEventListener("click", () => {
 
 function PopulateVoices() {
   // get the voices library from the local synthesizer
-  let voices = synth.getVoices();
+  voices = synth.getVoices();
 
   // create new variable for selected voices, male and female ('Alex and Samantha');
   const Voices = [];
