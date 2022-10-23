@@ -215,6 +215,12 @@ var grade4Words = [
   "churn",
   "chosen",
 ];
+var txtInput = document.querySelector("#txtInput");
+var voiceList = document.querySelector("#voiceList");
+var btnSpeak = document.querySelector("#btnSpeak");
+var wordPrompt = document.getElementsByClassName("wordPrompt");
+var synth = window.speechSynthesis;
+var voices = [];
 
 function addWordCount() {
   let counter = document.getElementById("wordCountSelect");
@@ -314,20 +320,24 @@ function submit() {
     document.getElementById("scoreContainer").innerHTML =
       " " + Math.round(score);
   }
+  restart = document.getElementById("restart-button");
+  restart.classList.remove("hide");
 }
 //CREATE A RESET BUTTON TO RESET THE PAGE BY RELOADING THE URL
 const refreshButton = document.querySelector(".refresh-button");
 const refreshPage = () => {
-  location.reload();
+  let controls = document.getElementById("vControls");
+  controls.classList.add("show");
+  const refreshButton = document.querySelector(".refresh-button");
+
+  refreshButton.classList.add("hide");
 };
 refreshButton.addEventListener("click", refreshPage);
 
-var txtInput = document.querySelector("#txtInput");
-var voiceList = document.querySelector("#voiceList");
-var btnSpeak = document.querySelector("#btnSpeak");
-var wordPrompt = document.getElementsByClassName("wordPrompt");
-var synth = window.speechSynthesis;
-var voices = [];
+const restartPage = () => {
+  location.reload();
+};
+refreshButton.addEventListener("click", refreshPage);
 
 PopulateVoices();
 if (speechSynthesis !== undefined) {
@@ -366,5 +376,9 @@ function PopulateVoices() {
 
   voiceList.selectedIndex = selectedIndex;
 }
+
+
+
+ 
 
 
