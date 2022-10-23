@@ -4,38 +4,50 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css"></link>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet"> 
   <title>ROSE SPELLING TEST</title>
 </head>
 
 <body>
   <div class = "gameTitle">
-    <h1 class="pageTitle">Spelling Game</h1>
+    <h1 class="pageTitle">Spelling Game</h1>  
+      <input class="refresh-button" type="button" value="Start Over"/>
+    
   </div>
   
-  <div class="controls">
+  <div class="controls" id="vControls">
     <div class="voiceControl">
       <div class="voiceChoice">
-      <p id="voiceTag">Voice</p><select id='voiceList'></select></div>
+      <p id="voiceTag">Choose a voice</p>
+      <select id='voiceList'></select>
+      </div>
+      
       <div>
-        <!-- //TODO: Set "mary had a little lamb" to button press -->
-      <!-- <input id='txtInput' placeholder='type something to test voice'/> -->
-      <div><button id='btnSpeak'>Test Voice</button></div>
+        <!-- //Input not displayed, for testing voices by user -->
+      <input type="submit" id='txtInput' value="Do you want to play uh gaym"/>
+      <div><input id='btnSpeak' type="button" value="Listen"></input></div>
     </div>
     </div>
   
-    <div class="gameControls">
-      <label># of Words</label><input id="wordCountSelect" placeholder="enter a number 5-30"/>
-      <button id='wordCount' onclick="addWordCount()">Submit</button>
+    <div class="gameControls" id='wordCount'>
+      <label>Choose number of words</label><input id="wordCountSelect" placeholder="enter a number 5-30"/>
+      <input id='wordCount' type="button" onclick="addWordCount()" value="Go">
    </div>
-   <button class="refresh-button">START OVER</button>
+  
   </div>
   
 <div id="inputListSection"></div>
   <div class=buttonsection>
     <div class="user_button_1">
-      <button class="submitButton" id="submitButtonScore" onclick="submit()" style="display: none">Check your Answers!</button>
+    
+      <input type="button" 
+      class="submitButton" 
+      id="submitButtonScore" 
+      onclick="submit()" 
+      style="display: none" 
+      value="Get Score"/>
+      
     </div>
   </div>
   

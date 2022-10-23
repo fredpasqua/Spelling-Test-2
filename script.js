@@ -218,10 +218,11 @@ var grade4Words = [
 
 function addWordCount() {
   let counter = document.getElementById("wordCountSelect");
-  console.log(counter.value);
   wordCount = counter.value;
   if (wordCount > 4 && wordCount < 31) {
     counterButton = document.getElementById("wordCount");
+    voiceControls = document.getElementById("vControls");
+    voiceControls.style.display = "none";
     counterButton.style.display = "none";
     generateRan();
     game();
