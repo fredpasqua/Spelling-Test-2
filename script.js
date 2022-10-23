@@ -215,6 +215,25 @@ var grade4Words = [
   "churn",
   "chosen",
 ];
+function PopulateVoices() {
+  // get the voices library from the local synthesizer
+  voices = synth.getVoices();
+
+  // create new variable for selected voices, male and female ('Alex and Samantha');
+  const Voices = [];
+  Voices.push(voices[0], voices[33]);
+  var selectedIndex = voiceList.selectedIndex < 0 ? 0 : voiceList.selectedIndex;
+  voiceList.innerHTML = "";
+  Voices.forEach((voice) => {
+    var listItem = document.createElement("option");
+    listItem.textContent = voice.name;
+    listItem.setAttribute("data-lang", voice.lang);
+    listItem.setAttribute("data-name", voice.name);
+    voiceList.appendChild(listItem);
+  });
+
+  voiceList.selectedIndex = selectedIndex;
+}
 
 function addWordCount() {
   let counter = document.getElementById("wordCountSelect");
@@ -346,22 +365,3 @@ btnSpeak.addEventListener("click", () => {
   synth.speak(toSpeak);
 });
 
-function PopulateVoices() {
-  // get the voices library from the local synthesizer
-  voices = synth.getVoices();
-
-  // create new variable for selected voices, male and female ('Alex and Samantha');
-  const Voices = [];
-  Voices.push(voices[0], voices[33]);
-  var selectedIndex = voiceList.selectedIndex < 0 ? 0 : voiceList.selectedIndex;
-  voiceList.innerHTML = "";
-  Voices.forEach((voice) => {
-    var listItem = document.createElement("option");
-    listItem.textContent = voice.name;
-    listItem.setAttribute("data-lang", voice.lang);
-    listItem.setAttribute("data-name", voice.name);
-    voiceList.appendChild(listItem);
-  });
-
-  voiceList.selectedIndex = selectedIndex;
-}
