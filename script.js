@@ -222,6 +222,8 @@ var wordPrompt = document.getElementsByClassName("wordPrompt");
 var synth = window.speechSynthesis;
 var voices = [];
 
+PopulateVoices();
+
 function addWordCount() {
   let counter = document.getElementById("wordCountSelect");
   wordCount = counter.value;
@@ -339,7 +341,7 @@ const restartPage = () => {
 };
 refreshButton.addEventListener("click", refreshPage);
 
-PopulateVoices();
+
 if (speechSynthesis !== undefined) {
   speechSynthesis.onvoiceschanged = PopulateVoices;
 }
