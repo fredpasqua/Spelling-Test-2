@@ -3,7 +3,24 @@ var wordList = [];
 var misSpelledWordList = [];
 let answers = [];
 var wordCount = 0;
+
 var grade4Words = [
+  "quizzed",
+  "strolled",
+  "stammered",
+  "whined",
+  "dew",
+  "temperature",
+  "clouds",
+  "vapor",
+  "endangered",
+  "adapt",
+  "captivity",
+  "wildlife",
+  "conservation",
+  "extinct",
+  "motion",
+  "gravity",
   "photograph",
   "autograph",
   "paragraph",
